@@ -8,9 +8,9 @@ import os
 def home(request):
     return render(request, 'app/home.html')
 
-def produtos(request):
-    produtos = Produto.objects.filter(disponivel=True)
-    return render(request, 'app/produtos.html', {'produtos': produtos})
+def planos(request):
+    planos = Produto.objects.filter(disponivel=True)
+    return render(request, 'app/planos.html', {'planos': planos})
 
 def contatos(request):
     return render(request, 'app/contatos.html')
@@ -29,7 +29,7 @@ def add_produto(request):
         form = ProdutoForm(request.POST, request.FILES)  # Note o request.FILES!
         if form.is_valid():
             form.save()
-            return redirect('lista_produtos')
+            return redirect('lista_planos')
     else:
         form = ProdutoForm()
     return render(request, 'app/add_produto.html', {'form': form})

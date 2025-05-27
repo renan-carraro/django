@@ -16,14 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from app.views import home, produtos, contatos, add_produto # Namespace para evitar conflitos
+from app.views import home, planos, contatos, add_produto # Namespace para evitar conflitos
 from django.conf.urls.static import static
 from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('app.urls')),
     path('', home, name='home'),
-    path('produtos/', produtos, name='produtos'),
+    path('planos/', planos, name='planos'),
     path('contatos/', contatos, name='contatos'),
     path('add-produto/', add_produto, name='add_produto'),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
