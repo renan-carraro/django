@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Curso</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'partials/header.html' %}
+
+    <main class="curso-container">
+        <h1>Adicionar Novo Curso</h1>
+        <form action="{% url 'salvar_curso' %}" method="POST">
+            {% csrf_token %}
+            
+            <label for="nome">Nome do Curso:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" rows="5" required></textarea>
+
+            <label for="instrutor">Instrutor:</label>
+            <input type="text" id="instrutor" name="instrutor" required>
+
+            <label for="duracao">Duração (semanas):</label>
+            <input type="number" id="duracao" name="duracao" required>
+
+            <label for="modalidade">Modalidade:</label>
+            <select id="modalidade" name="modalidade">
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+            </select>
+
+            <button type="submit">Cadastrar Curso</button>
+        </form>
+    </main>
+
+    {% include 'partials/footer.html' %}
+</body>
+</html>

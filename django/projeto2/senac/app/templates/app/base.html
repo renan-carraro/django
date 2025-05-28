@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Meu Site{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% include 'partials/header.html' %}
+
+    <main>
+        {% block content %}
+        <p>Este é o conteúdo da página.</p>
+        {% endblock %}
+    </main>
+
+    {% include 'partials/footer.html' %}
+    {% include 'partials/scripts.html' %}
+</body>
+</html>
