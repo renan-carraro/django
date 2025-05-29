@@ -5,7 +5,7 @@
 {% block content %}
 
 <!-- Header personalizado para a home -->
-{% with "Bem-vindo ao nosso site" as header_title %}
+{% with "Bem-vindo a cademica" as header_title %}
 {% with "Conheça nossos produtos ou fale conosco" as header_subtitle %}
     {% include 'app/partials/_header.html' %}
 {% endwith %}
@@ -18,10 +18,10 @@
                     <h1 class="display-4 fw-bold">Sua jornada começa aqui</h1>
                     <p class="lead mb-4">Somos top referencia em musculação a 12 anos.</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#" class="btn btn-primary btn-lg">
+                        <a href="{% url 'produtos' %}" class="btn btn-primary btn-lg">
                             <i class="fas fa-phone me-2"></i>Nossos planos
                         </a>
-                        <a href="#" class="btn btn-outline-light btn-lg">
+                        <a href="{% url 'contatos' %}" class="btn btn-outline-light btn-lg">
                             <i class="fas fa-tools me-2"></i>Nossos contatos
                         </a>
                     </div>

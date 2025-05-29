@@ -1,16 +1,121 @@
-/* meuapp/static/meuapp/css/styles.css */
+/* Definição das cores principais */
 :root {
-    --primary-color: #00ff55;
-    --dark-color: #343a40;
+    --primary-color: #ff6600; /* Laranja vibrante */
+    --secondary-color: #000000;
+    --tercira-color: #346068cc; /* Preto profundo */
+    --text-light: #ffffff; /* Branco para contraste */
+  }
+  
+  /* Aplicando as cores ao fundo e texto */
+  body {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilizando botões */
+  .btn-primary {
+    background-color: var(--tercira-color);
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1b1008; /* Tom mais escuro ao passar o mouse */
+  }
+  
+  .btn-outline-light {
+    border-color: var(--tercira-color);
+    color: var(---color);
+  }
+  
+  .btn-outline-light:hover {
+    background-color: var(--tercira-color);
+    color: var(--text-light);
+  }
+  
+  /* Ajustes em seções */
+  .hero-section {
+    background-color: rgba(13, 110, 253, 0.25);
+    color: var(--text-light);
+    padding: 50px 0;
+  }
+  
+  /* Estilizando cards */
+  .card {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: 1px solid var(--primary-color);
+  }
+  
+  .card h4 {
+    color: var(--primary-color);
+  }
+  
+  .card-body i {
+    color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    height: 100%; /* Ocupa toda a altura do card */
+  
 }
 
-body {
-    font-family: 'Segoe UI', sans-serif;
+/* Estilizando o card de serviços */
+  .service-card {
+  width: 320px; /* Largura semelhante a um celular */
+  height: 600px; /* Altura aproximada */
+  border-radius: 25px; /* Cantos arredondados, simulando um smartphone */
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card {
-    transition: transform 0.3s;
+/* Simulando a tela */
+.service-card img {
+  width: 100%;
+  border-radius: 15px;
 }
-.card:hover {
-    transform: translateY(-5px);
+
+/* Ajustando o botão */
+.service-card .btn {
+  width: 100%;
+  border-radius: 15px;
+  font-size: 1.2rem;
 }
+  
+  /* Rodapé */
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  .bg-light {
+    --bs-bg-opacity: 1;
+    background-color: rgba(13, 110, 253, 0.25) !important;
+}
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ajusta a altura ao tamanho da tela */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
