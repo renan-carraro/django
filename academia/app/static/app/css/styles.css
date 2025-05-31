@@ -118,4 +118,10 @@ img {
   max-width: 100%;
   height: auto;
 }
+.img-produto {
+  height: 120px;
+  width: 120px;
+  object-fit: contain;
+}
+
 
